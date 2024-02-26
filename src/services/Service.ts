@@ -16,7 +16,7 @@ export const login = async(url: string, dados: Object, setDados: Function) => {
 
 export const buscar = async(url: string, setDados: Function, header: Object) => {
   const resposta = await api.get(url,header)
-  setDados(resposta.config.data)
+  setDados(resposta.data)
 }
 
 export const cadastrar = async(url: string, dados:Object, setDados: Function, header: Object) => {
