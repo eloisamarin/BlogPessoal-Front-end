@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../contexts/AuthContext"
+import { toastAlerta } from "../../util/toastAlerta"
 
 function NavBar() {
   let navigate = useNavigate()
@@ -9,7 +10,7 @@ function NavBar() {
 
   function logout() {
     handleLogout()
-    alert('Usuário deslogado com sucesso')
+    toastAlerta('Usuário deslogado com sucesso', 'sucesso')
     navigate('/login')
   }
 
@@ -18,7 +19,10 @@ function NavBar() {
   if (usuario.token !== "") {
     navbarComponent = (<div className='w-full bg-[#0891b2] text-white flex justify-center py-4'>
       <div className="container flex justify-between text-lg">
-        <div className='text-2xl font-bold uppercase '>Blog Pessoal</div>
+        <div className='text-2xl font-bold uppercase '>
+          <Link to='/home' className='hover:underline'>Blog Pessoal</Link>
+        </div>
+
 
         <div className='flex gap-4'>
           <Link to='/postagens' className='hover:underline'>Postagens</Link>
