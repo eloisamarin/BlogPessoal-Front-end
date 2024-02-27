@@ -71,6 +71,7 @@ function DeletarTema() {
     }
     return(
 
+        <div className="bg-cyan-50 min-h-screen flex items-center justify-center">
         <div className='container w-1/3 mx-auto'>
             <h1 className='text-4x1 text-center my-4'>Deletar tema</h1>
         
@@ -79,7 +80,7 @@ function DeletarTema() {
                 className='border flex flex-col rounded-2xl 
                 overflow-hidden justify-between'
                 >
-                <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
+                <header className='py-2 px-6 bg-cyan-600 text-white font-bold text-2xl'>
                     Tema
                 </header>
                 <p className='p-8 text-3xl bg-slate-200 h-full'>
@@ -92,11 +93,12 @@ function DeletarTema() {
                     Não
                 </button>
                 <button 
-                    className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' 
+                    className='w-full text-slate-100 bg-cyan-400 hover:bg-cyan-700 flex items-center justify-center' 
                     onClick={deletarTema}
                     >
                     Sim
                 </button>
+                </div>
                 </div>
                 
             </div>

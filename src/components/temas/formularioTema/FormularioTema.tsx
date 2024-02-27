@@ -96,6 +96,7 @@ function FormularioTema() {
   }, [token]);
 
                 return (
+
                     <div className="container flex flex-col items-center justify-center mx-auto">
                         <h1 className="text-4xl text-center my-8">
                             {id === undefined ? 'Cadastre um novo tema' : 'Editar tema'}
@@ -114,7 +115,7 @@ function FormularioTema() {
                                 />
                             </div>
                             <button
-                                className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
+                                className="rounded text-slate-100 bg-cyan-400 hover:bg-cyan-800 w-1/2 py-2 mx-auto block"
                                 type="submit"
                             >
                                  {id === undefined ? 'Cadastrar' : 'Editar'}
